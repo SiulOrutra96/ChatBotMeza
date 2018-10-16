@@ -1,0 +1,46 @@
+Entro aquienviar mensajeArray
+(
+    [senderid] => 1955562287844120
+    [message] => hola
+)
+1Entro aquiArray
+(
+    [senderid] => 1955562287844120
+    [message] => hola
+)
+enviar mensaje1Entro aquiArray
+(
+    [senderid] => 1955562287844120
+    [message] => hola
+)
+Enviar mensaje-------------------------------1Entro aquiArray
+(
+    [senderid] => 1955562287844120
+    [message] => hola
+)
+Enviar mensaje-------------------------------{"error":{"message":"An active access token must be used to query information about the current user.","type":"OAuthException","code":2500,"fbtrace_id":"Fy3+9fx0Tz5"}}Entro aquiArray
+(
+    [senderid] => 1955562287844120
+    [message] => hola
+)
+Enviar mensaje-------------------------------{"error":{"message":"An active access token must be used to query information about the current user.","type":"OAuthException","code":2500,"fbtrace_id":"BYPMSi\/kC\/a"}}Entro aquiArray
+(
+    [senderid] => 1955562287844120
+    [message] => hola
+)
+https://graph.facebook.com/v2.6/me/messages?access_token=Enviar mensaje-------------------------------{"error":{"message":"An active access token must be used to query information about the current user.","type":"OAuthException","code":2500,"fbtrace_id":"AyUVdF4c53V"}}Entro aquiArray
+(
+    [senderid] => 1955562287844120
+    [message] => hola
+)
+https://graph.facebook.com/v2.6/me/messages?access_token=EAAJ0gIC8ZC8ABAKeMBgWxmo2gXQ4KawcUUkOwNbwQFUZA9f2MDXHHhvLzseesB7sTZB24RycNLp4A7Qq0bOX7A3U4ZBx7dyNjEZBm8TPAXBdJ3VONZBe29tZBZCstOB1K9JhEPhbcCgwLfkdhsUrMsYHKfzG0HWZBmoll8ZBqmqQ2QOwZDZDEnviar mensaje-------------------------------{"error":{"message":"(#100) The parameter recipient is required","type":"OAuthException","code":100,"fbtrace_id":"CGbCJ35GB10"}}Entro aquiArray
+(
+    [senderid] => 1955562287844120
+    [message] => hola
+)
+1Enviar mensaje-------------------------------{"error":{"message":"(#100) The parameter recipient is required","type":"OAuthException","code":100,"fbtrace_id":"EHHB7cW95ee"}}Entro aquiArray
+(
+    [senderid] => 1955562287844120
+    [message] => hola
+)
+Parametros---------------------1Enviar mensaje-------------------------------{"error":{"message":"(#100) The parameter recipient is required","type":"OAuthException","code":100,"fbtrace_id":"HGfBpzue+Os"}}
