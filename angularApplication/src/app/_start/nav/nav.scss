@@ -1,0 +1,23 @@
+.mat-drawer-container.right-sidenav{
+  position: initial !important;
+}
+
+.navStyle{
+    position: relative;
+    // background-color: #e6e6e6;
+    height: 50px;
+    // border-color: black;
+    // border: 2px solid #666;
+    box-shadow: 0px 2px 5px #666;
+    // margin-right: 1%;
+    // margin-bottom: 1%;
+}
+
+.layoutContainer {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #dadada;
+}
