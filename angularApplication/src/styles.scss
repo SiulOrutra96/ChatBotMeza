@@ -3,7 +3,7 @@
 // @import 'material-icons/iconfont/material-icons.scss';
 
 $typography: mat-typography-config(
-  $font-family: 'Arial, monospace',
+  $font-family: 'Verdana, monospace',
   $headline: mat-typography-level(32px, 48px, 700)
 );
 
@@ -16,3 +16,20 @@ $warn:    mat-palette($mat-red, 500);
 $theme: mat-light-theme($primary, $accent, $warn);
 
 @include angular-material-theme($theme);
+
+.subtitle {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.text {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 13px;
+  // font-weight: bold;
+}
+.text-bold {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 13px;
+  font-weight: bold;
+}

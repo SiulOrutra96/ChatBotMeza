@@ -11,7 +11,7 @@
     </div>
   </mat-sidenav>
 
-  <div class="navStyle" style="background-color: rgb(158, 79, 123)">
+  <div *ngIf="router.url != '/'" class="navStyle" style="background-color: rgb(158, 79, 123)">
     <div fxLayout="row">
       <h3 fxFlexOffset="78%" fxFlex="15%" style="text-align: right; position: relative; top: -4px; color:white">
         <strong>{{userName}}</strong>
@@ -25,6 +25,10 @@
         </a>
       </span>
     </div>
+  </div>
+
+  <div class="footer">
+    Realizado por ingenieria en computación inteligente
   </div>
   <ng-content></ng-content>
 </mat-sidenav-container>
