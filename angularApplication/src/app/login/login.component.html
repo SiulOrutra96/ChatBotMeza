@@ -15,26 +15,33 @@
     <br>
     <!-- <mat-card-title style="text-align: center; color:rgb(150, 0, 139)">Inicio de sesión</mat-card-title> -->
     <mat-card-content style="text-align: center">
-        <font class="subtitle" style="text-align: center; color:rgb(150, 0, 139)">INICIO DE SESIÓN
-        </font>
-      <div>
+        <font class="subtitle" style="text-align: center; color:rgb(74, 21, 51)">INICIO DE SESIÓN</font>
+        <br>
+        <br>
+      <div fxLayout="row">
         <div fxFlexOffset.gt-xs="10%" fxFlex.gt-xs="80%">
           <mat-form-field style="width: 100%">
-            <input matInput placeholder="Nombre de usuario">
+            <input matInput [(ngModel)]="userName" placeholder="Nombre de usuario" (keyup)="loginBtn()">
           </mat-form-field>
         </div>
       </div>
       <div fxLayout="row">
         <div fxFlexOffset.gt-xs="10%" fxFlex.gt-xs="80%">
           <mat-form-field style="width: 100%">
-            <input matInput placeholder="Contraseña">
+            <input matInput [(ngModel)]="password" [type]="hide ? 'password' : 'text'" placeholder="Contraseña" (keyup)="loginBtn()">
+            <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility' : 'visibility_off'}}</mat-icon>
           </mat-form-field>
+        </div>
+      </div>
+      <div fxLayout="row">
+        <div fxFlexOffset.gt-xs="10%" fxFlex.gt-xs="80%">
+            <mat-checkbox color="primary">Recordarme</mat-checkbox>
         </div>
       </div>
       <br>
       <div fxLayout="row">
         <div fxFlexOffset.gt-xs="20%" fxFlex.gt-xs="60%">
-          <button mat-raised-button color="accent" routerLink="/" style="width: 100%">Entrar</button>
+          <button mat-raised-button color="accent" [disabled]="initBtn" routerLink="/home" style="width: 100%">Entrar</button>
         </div>
       </div>
       <br>

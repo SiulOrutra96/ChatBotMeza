@@ -1,0 +1,20 @@
+.tab {
+    overflow: auto;
+    flex-direction: column;
+    width: 100%;
+}
+
+table {
+  width: 100%;
+  text-align: center;
+}
+
+.mat-header-cell, .mat-cell {
+  display: block;
+  min-height: auto;
+  text-align: center;
+}
+
+.mat-column-actions{
+  flex: 0 0 120px;
+}

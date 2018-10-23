@@ -3,9 +3,12 @@ import { RouterModule, Routes, PreloadAllModules } from '@angular/router';
 import { LoginComponent } from './login/login.component';
 
 const appRoutes: Routes = [
-    {
-        path: '', component: LoginComponent // loadChildren: './welcome/welcome.module#WelcomeModule' //
-    }
+    { path: '', component: LoginComponent },
+    // path: 'user', loadChildren: './user/user.module#UserModule'
+    { path: 'home', loadChildren: './home/home.module#HomeModule'},
+    { path: 'users', loadChildren: './users/users.module#UsersModule'},
+    { path: 'edit', loadChildren: './edit/edit.module#EditModule'},
+    { path: 'mail', loadChildren: './mail/mail.module#MailModule'},
 ];
 
 @NgModule({

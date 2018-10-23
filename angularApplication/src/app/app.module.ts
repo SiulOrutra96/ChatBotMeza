@@ -8,10 +8,9 @@ import { CommonModule } from '@angular/common';
 import { AppComponent } from './app.component';
 import { StartModule } from './_start/start.module';
 import { LoginModule} from './login/login.module';
-import { RouterModule, Router } from '../../node_modules/@angular/router';
+import { RouterModule, Router } from '@angular/router';
 import { AppRoutingModule } from './app.routing';
 import {FlexLayoutModule} from '@angular/flex-layout';
-
 
 @NgModule({
   declarations: [

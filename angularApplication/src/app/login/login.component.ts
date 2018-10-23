@@ -1,9 +1,5 @@
 import { Router, ActivatedRoute } from '@angular/router';
-import { Component, OnInit, SimpleChanges, ChangeDetectorRef } from '@angular/core';
-import { MatDialog } from '@angular/material';
-import { DomSanitizer } from '@angular/platform-browser';
-import { MatIconRegistry } from '@angular/material/icon';
-
+import { Component, ChangeDetectorRef } from '@angular/core';
 @Component({
     selector: 'login-component',
     templateUrl: 'login.component.html',
@@ -12,14 +8,22 @@ import { MatIconRegistry } from '@angular/material/icon';
 })
 export class LoginComponent {
     constructor (
-        public dialog: MatDialog,
         public router: Router,
         private route: ActivatedRoute,
         private changeDetectorRef: ChangeDetectorRef
       ) {
     }
 
-    toogleMenu() {
+    userName: string;
+    password: string;
+    initBtn = true;
+    hide = true;
 
-  }
+    loginBtn() {
+      if (this.userName && this.password) {
+        this.initBtn = false;
+      } else {
+        this.initBtn = true;
+      }
+    }
 }

@@ -1,6 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
-@import '~@angular/material/theming';
-// @import 'material-icons/iconfont/material-icons.scss';
+// @import '~@angular/material/theming';
+@import '_theming';
 
 $typography: mat-typography-config(
   $font-family: 'Verdana, monospace',
@@ -9,9 +9,9 @@ $typography: mat-typography-config(
 
 @include mat-core($typography);
 
-$primary: mat-palette($mat-blue, 700);
-$accent:  mat-palette($mat-light-blue, 700);
-$warn:    mat-palette($mat-red, 500);
+$primary: mat-palette($mat-chatBot, 900);
+$accent:  mat-palette($mat-chatBot, 800);
+$warn:    mat-palette($mat-chatBot, 700);
 
 $theme: mat-light-theme($primary, $accent, $warn);
 
