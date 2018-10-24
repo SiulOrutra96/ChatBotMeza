@@ -1,30 +1,30 @@
 <mat-sidenav-container class="layoutContainer">
   <mat-sidenav style="background-color: rgb(74, 21, 51)" #sidenav position="start" [opened]="router.url != '/' || sideNavOpened ? true : false"
-    mode="side" fixedBottomGap=0 fixedInViewport=true [ngStyle]="{'width': '110px'}">
+    mode="side" fixedBottomGap=0 fixedInViewport=true [ngStyle]="{'width': '60px'}">
     <br>
     <div fxLayout="column" fxLayoutAlign=" center" style="text-align:center; color:white">
-      <div style="height: 32px;"></div>
+      <div style="height: 30px;"></div>
       <div style="background-color: white; width: 100%; height: 10px;"></div>
       <div fxLayout="row">
-        <button style="height: 110px; width: 110px;" mat-icon-button routerLink="/home">
+        <button style="height: 60px; width: 60px;" mat-icon-button routerLink="/home">
           <mat-icon class="icon-items">home</mat-icon>
         </button>
       </div>
       <div style="background-color: white; width: 100%; height: 10px;"></div>
       <div fxLayout="row">
-          <button style="height: 110px; width: 110px;"mat-icon-button routerLink="/users">
+          <button style="height: 60px; width: 60px;"mat-icon-button routerLink="/users">
             <mat-icon class="icon-items">supervised_user_circle</mat-icon>
           </button>
       </div>
       <div style="background-color: white; width: 100%; height: 10px;"></div>
       <div fxLayout="row">
-        <button style="height: 110px; width: 110px;" mat-icon-button routerLink="/edit">
+        <button style="height: 60px; width: 60px;" mat-icon-button routerLink="/edit">
           <mat-icon class="icon-items">border_color</mat-icon>
         </button>
       </div>
       <div style="background-color: white; width: 100%; height: 10px;"></div>
       <div fxLayout="row">
-        <button style="height: 110px; width: 110px;" mat-icon-button routerLink="/mail">
+        <button style="height: 60px; width: 60px;" mat-icon-button routerLink="/mail">
           <mat-icon class="icon-items">mail</mat-icon>
         </button>
       </div>
@@ -32,7 +32,7 @@
     </div>
   </mat-sidenav>
 
-  <div fixedBottomGap=0 fixedInViewport=true *ngIf="router.url != '/'" class="navStyle" style="background-color: rgb(74, 21, 51)">
+  <div *ngIf="router.url != '/'" class="navStyle" style="background-color: rgb(74, 21, 51)">
     <div fxLayout="row">
       <h3 fxFlexOffset="78%" fxFlex="15%" style="text-align: right; position: relative; top: -4px; color:white">
         <strong>{{userName}}</strong>
@@ -47,8 +47,10 @@
       </span>
     </div>
   </div>
-  <ng-content></ng-content>
+  <mat-sidenav-container class="subLayoutContainer">
+    <ng-content></ng-content>
+  </mat-sidenav-container>
   <div *ngIf="router.url == '/'" class="footer">
-      Realizado por ingenieria en computación inteligente
+      Realizado por Ingenieria en computación inteligente 2018
   </div>
 </mat-sidenav-container>
