@@ -1,0 +1,35 @@
+/* You can add global styles to this file, and also import other style files */
+// @import '~@angular/material/theming';
+@import '_theming';
+
+$typography: mat-typography-config(
+  $font-family: 'Verdana, monospace',
+  $headline: mat-typography-level(32px, 48px, 700)
+);
+
+@include mat-core($typography);
+
+$primary: mat-palette($mat-chatBot, 900);
+$accent:  mat-palette($mat-chatBot, 800);
+$warn:    mat-palette($mat-chatBot, 700);
+
+$theme: mat-light-theme($primary, $accent, $warn);
+
+@include angular-material-theme($theme);
+
+.subtitle {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.text {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 13px;
+  // font-weight: bold;
+}
+.text-bold {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 13px;
+  font-weight: bold;
+}
