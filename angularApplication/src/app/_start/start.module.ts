@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import {FlexLayoutModule} from '@angular/flex-layout';
 import { CommonModule } from '@angular/common';
 import {MatSidenavModule} from '@angular/material/sidenav';
+import { ChartsModule } from 'ng2-charts';
 import {
     MatButtonModule,
     MatCardModule,
@@ -59,7 +60,8 @@ import { RouterModule } from '@angular/router';
         MatNativeDateModule,
         MatSnackBarModule,
         MatTableModule,
-        MatPaginatorModule
+        MatPaginatorModule,
+        ChartsModule
     ],
     providers: [
         {provide: MAT_DATE_LOCALE, useValue: 'en-GB'},

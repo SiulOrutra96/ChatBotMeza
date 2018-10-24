@@ -3,29 +3,30 @@ import { HomeRoutingModule } from './home.routing';
 import { StartModule } from '../_start/start.module';
 import { HomeComponent } from './home.component';
 import { CommonModule } from '@angular/common';
-import { MAT_DIALOG_DEFAULT_OPTIONS} from '@angular/material';
+import { MAT_DIALOG_DEFAULT_OPTIONS } from '@angular/material';
+import { ChartsModule } from 'ng2-charts/ng2-charts';
 import {
-  MatButtonModule,
-  MatCardModule,
-  MatDialogModule,
-  MatIconModule,
-  MatInputModule,
-  MatListModule,
-  MatMenuModule,
-  MatSidenavModule,
-  MatTabsModule,
-  MatToolbarModule,
-  MatTooltipModule,
-  MatCheckboxModule,
-  MatDividerModule,
-  MatFormFieldModule,
-  MatDatepickerModule,
-  MAT_DATE_LOCALE,
-  MatNativeDateModule,
-  MatSnackBarModule,
-  MatSnackBar,
-  MatTableModule,
-  MatPaginatorModule,
+    MatButtonModule,
+    MatCardModule,
+    MatDialogModule,
+    MatIconModule,
+    MatInputModule,
+    MatListModule,
+    MatMenuModule,
+    MatSidenavModule,
+    MatTabsModule,
+    MatToolbarModule,
+    MatTooltipModule,
+    MatCheckboxModule,
+    MatDividerModule,
+    MatFormFieldModule,
+    MatDatepickerModule,
+    MAT_DATE_LOCALE,
+    MatNativeDateModule,
+    MatSnackBarModule,
+    MatSnackBar,
+    MatTableModule,
+    MatPaginatorModule,
 } from '@angular/material';
 
 @NgModule({
@@ -38,11 +39,12 @@ import {
         MatButtonModule,
         MatTableModule,
         MatCardModule,
-    MatDialogModule,
+        ChartsModule,
+        MatDialogModule,
     ],
     entryComponents: [],
     providers: [
-      {provide: MAT_DIALOG_DEFAULT_OPTIONS, useValue: {hasBackdrop: true}}
+        { provide: MAT_DIALOG_DEFAULT_OPTIONS, useValue: { hasBackdrop: true } }
     ],
     exports: [
     ]

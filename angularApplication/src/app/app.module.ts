@@ -12,6 +12,7 @@ import { RouterModule, Router } from '@angular/router';
 import { AppRoutingModule } from './app.routing';
 import {FlexLayoutModule} from '@angular/flex-layout';
 
+
 @NgModule({
   declarations: [
     AppComponent
@@ -27,7 +28,8 @@ import {FlexLayoutModule} from '@angular/flex-layout';
     MatTableModule,
     MatCheckboxModule,
     MatIconModule, CdkTableModule, CommonModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
