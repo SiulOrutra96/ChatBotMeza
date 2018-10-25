@@ -4,6 +4,44 @@
       <font class="subtitle">
         USUARIOS
       </font>
+      <div fxLayout="row" class="margin-top" fxLayoutAlign="space-around start" layout-wrap>
+        <div fxFlex="60">
+          <font class="front-1">
+            Lista de usuarios
+          </font>
+        </div>
+        <div fxFlex="20">
+          <button mat-raised-button color="accent" (click)="addUser()">Agregar +</button>
+        </div>
+      </div>
+      <div fxLayout="row" class="margin-top" fxLayoutAlign="space-around start" layout-wrap>
+        <div fxFlex="80" class="mat-elevation-z8">
+          <mat-table #table [dataSource]="dataSource">
+            <ng-container matColumnDef="id">
+              <mat-header-cell *matHeaderCellDef> No. </mat-header-cell>
+              <mat-cell *matCellDef="let element"> {{element.id}} </mat-cell>
+            </ng-container>
+
+            <ng-container matColumnDef="name">
+              <mat-header-cell *matHeaderCellDef> Nombre </mat-header-cell>
+              <mat-cell *matCellDef="let element"> {{element.name}} {{element.lastName}} </mat-cell>
+            </ng-container>
+
+            <ng-container matColumnDef="grade">
+              <mat-header-cell *matHeaderCellDef> Grado </mat-header-cell>
+              <mat-cell *matCellDef="let element"> {{element.grade}} </mat-cell>
+            </ng-container>
+
+            <ng-container matColumnDef="calification">
+              <mat-header-cell *matHeaderCellDef> Calificación </mat-header-cell>
+              <mat-cell *matCellDef="let element"> {{element.calification}} </mat-cell>
+            </ng-container>
+
+            <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+            <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+          </mat-table>
+        </div>
+      </div>
     </mat-card-content>
   </mat-card>
 </div>
