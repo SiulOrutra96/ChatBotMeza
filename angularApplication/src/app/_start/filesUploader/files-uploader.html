@@ -1,0 +1,59 @@
+
+    <ng-container>
+        <div *ngIf="message">
+            <div *ngFor="let file of files" class="{{container}}">
+                <img *ngIf="file.isImage" [src]="file.url">
+                <mat-icon matSuffix *ngIf="!file.isImage" style.color="{{file.extention === '.pdf' ? '#770b0b' : '#0049bd'}}"
+                    style="font-size: 136px; height: 136px; width: 136px;">insert_drive_file</mat-icon>
+                <button md-mini-fab (click)="removeFile(file)" color="warn">
+                    <mat-icon class="md-24">close</mat-icon>
+                </button>
+            </div>
+        </div>
+
+        <div *ngIf="message === '' && files[0]" class="{{container}}">
+            <img *ngIf="files[0]" [src]="files[0].url" class="img-container2">
+            <button md-mini-fab (click)="removeFile(files[0])" color="warn">
+                <mat-icon class="md-24">close</mat-icon>
+            </button>
+        </div>
+    </ng-container>
+
+<div class="{{classFile}}" *ngIf="files && files.length<limit">
+    <div *ngIf="message" layout="column" layout-wrap class="camaraButton" fxLayoutAlign="center center">
+        <div fxFlex="100" class="camaraIcon">
+            <i class="material-icons">photo_camera</i>
+        </div>
+        <div fxFlex="100" class="textInfo">
+            {{message}}
+        </div>
+    </div>
+    <div *ngIf="message ===''">
+        <div flex="100">
+            <!-- <img *ngIf="avatar!=null" src="{{avatar}}" class="img-container2"> -->
+            <mat-icon matSuffix style="font-size: 190px; height: 200px; width: 200px;">account_circle</mat-icon>
+        </div>
+    </div>
+    <input class="fileInput" type="file" name="file1" multiple (change)="addFiles($event)" [accept]="formats" title="Cambiar Avatar" />
+</div>
+<!-- <div *ngIf="!this.user">
+    <ng-container>
+        <div *ngIf="message">
+            <div *ngFor="let file of files" class="{{container}}">
+                <img *ngIf="file.isImage" [src]="file.url">
+                <mat-icon matSuffix *ngIf="!file.isImage" style.color="{{file.extention === '.pdf' ? '#770b0b' : '#0049bd'}}"
+                    style="font-size: 136px; height: 136px; width: 136px;">insert_drive_file</mat-icon>
+                <button md-mini-fab (click)="removeFile(file)" color="warn">
+                    <mat-icon class="md-24">close</mat-icon>
+                </button>
+            </div>
+        </div>
+
+        <div *ngIf="message === '' && files[0]" class="{{container}}">
+            <img *ngIf="files[0]" [src]="files[0].url" class="img-container2">
+            <button md-mini-fab (click)="removeFile(files[0])" color="warn">
+                <mat-icon class="md-24">close</mat-icon>
+            </button>
+        </div>
+    </ng-container>
+</div> -->

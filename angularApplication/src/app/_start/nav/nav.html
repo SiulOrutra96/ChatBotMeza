@@ -34,10 +34,18 @@
 
   <div class="navStyle" [ngStyle]="{'height': router.url != '/' ? '50px' : '20px'}">
     <div fxLayout="row" *ngIf="router.url != '/'">
-      <h3 fxFlexOffset="78%" fxFlex="15%" style="text-align: right; position: relative; top: -4px; color:white">
-        <strong>{{userName}}</strong>
-      </h3>
-      <span fxFlex="5%" style="text-align: right; position: relative; top: 4px; color: white">
+      <div fxFlexOffset="5%" fxFlex="35%" style="color: white; text-align: left; position: relative; top: -4px;">
+        <h3 style="cursor: pointer" routerLink="/home">Panel de Administración</h3>
+      </div>
+      <div fxLayout="row" style="text-align: right" fxFlexOffset="33%" fxFlex="20%">
+        <button style="height: 60px; width: 60px; text-align: center; position: relative; top: -6px; color:white" (click)="sidenav.open()" mat-icon-button>
+          <mat-icon class="icon-items">account_box</mat-icon>
+        </button>
+        <h3 style="text-align: center; position: relative; top: -4px; color:white">
+          <strong>{{userName}}</strong>
+        </h3>
+      </div>
+      <span fxFlex="10%" style="text-align: center; color: white; position: relative; top: 3px;">
         <!-- *ngIf="router.url != '/'" <a mat-icon-button matTooltip="Perfil" routerLink="/" style="text-align: left">
           <mat-icon style="font-size: 38px;">account_circle</mat-icon>
         </a> -->
@@ -48,6 +56,65 @@
     </div>
   </div>
   <mat-sidenav-container class="subLayoutContainer" [ngStyle]="{'top': router.url != '/' ? '51px' : '21px'}">
+    <mat-sidenav class="sidenav-style2" #sidenav position="end" [opened]="router.url != '/' && userSideNav" mode="over">
+      
+      <mat-toolbar style="background-color:rgb(167, 181, 204);" fxLayout="row" layout-wrap>
+          <div fxFlex="90%" fxLayout="row" layout-wrap>
+              <div fxFlex="noshrink" fxFlex.gt-sm="40%" layout-wrap>
+                  <strong>
+                      <font>Mi Perfil</font>
+                  </strong>
+              </div>
+          </div>
+          <div style="text-align:right" fxFlex="10%">
+              <button mat-icon-button matTooltip="Cerrar" (click)="sidenav.close()">
+                  <mat-icon>close</mat-icon>
+              </button>
+          </div>
+      </mat-toolbar>
+      <mat-tab-group>
+
+      </mat-tab-group>
+
+      <div fxLayout="row" fxLayoutAlign="center center" style="color:rgb(0, 0, 0)">
+          <!-- <mat-icon style="font-size: 200px; position: relative; left: -88px; cursor: pointer;">account_circle</mat-icon> -->
+          <files-uploader [files]="photo" limit="1" message=""></files-uploader>
+      </div>
+      <div fxLayout="row" fxLayoutAlign="center center" style="position: relative; top: 0px; height: 50px;">
+          <strong fxFlexOffset="10%" fxFlex="30%" style="font-size: 20px">Nombre:</strong>
+          <div style="font-size: 15px" fxFlex="60%">
+              <input *ngIf="edit" [(ngModel)]="userName">
+              <div *ngIf="!edit">{{userName}}</div>
+          </div>
+      </div>
+      <div fxLayout="row" fxLayoutAlign="center center" style="position: relative; top: 0px; height: 50px;">
+          <strong fxFlexOffset="10%" fxFlex="30%" style="font-size: 20px">Email:</strong>
+          <div style="font-size: 15px" fxFlex="60%">
+            <input *ngIf="edit" [(ngModel)]="email">
+            <div *ngIf="!edit">{{email}}</div>
+          </div>
+      </div>
+      <div fxLayout="row" fxLayoutAlign="center center" style="position: relative; top: 0px; height: 50px;">
+          <strong fxFlexOffset="10%" fxFlex="30%" style="font-size: 20px">Teléfono:</strong>
+          <div style="font-size: 15px" fxFlex="60%">
+              <input *ngIf="edit" [(ngModel)]="phone">
+              <div *ngIf="!edit">{{phone}}</div>
+          </div>
+      </div>
+      <div fxLayout="row" fxLayoutAlign="center center" style="position: relative; top: 0px; height: 50px;">
+          <strong fxFlexOffset="10%" fxFlex="30%" style="font-size: 20px">Sobre mi:</strong>
+          <div style="font-size: 15px" fxFlex="60%">
+              <input *ngIf="edit" [(ngModel)]="description">
+              <div *ngIf="!edit">{{description}}</div>
+          </div>
+      </div>
+      <div fxLayout="row" fxLayoutAlign="center center" style="position: relative; top: 50px;">
+          <div fxFlexOffset="10%" fxFlex="20%"><mat-icon style="cursor: pointer" (click)="edit = true">build</mat-icon></div>
+          <div fxFlex="20%"><mat-icon style="cursor: pointer" (click)="edit = false">save</mat-icon></div>
+          <div fxFlex="20%"><mat-icon style="cursor: pointer">assignment</mat-icon></div>
+          <div fxFlex="20%"><mat-icon style="cursor: pointer">info</mat-icon></div>
+      </div>
+    </mat-sidenav>
     <ng-content></ng-content>
   </mat-sidenav-container>
 </mat-sidenav-container>

@@ -13,9 +13,16 @@ import { Router, ActivatedRoute, Params } from '@angular/router';
 })
 export class NavComponent implements OnInit{
     sideNavOpened = false;
+    userSideNav = false;
     sideNavSize = '100px';
     title: string;
-    userName = 'Ricardo';
+    userName = 'Usuario';
+    email = '...';
+    phone = '...';
+    description = '...';
+    photo = [];
+
+    edit = false;
 
     constructor(
         public dialog: MatDialog,

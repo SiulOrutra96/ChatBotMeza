@@ -29,10 +29,11 @@ import { NavComponent } from './nav/nav';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
+import { FilesUploader } from './filesUploader/files-uploader';
 
 @NgModule({
     declarations: [
-        NavComponent,
+        NavComponent, FilesUploader
     ],
     imports: [
         FlexLayoutModule,
@@ -84,7 +85,8 @@ import { RouterModule } from '@angular/router';
         MatDividerModule,
         MatFormFieldModule,
         FlexLayoutModule,
-        NavComponent
+        NavComponent,
+        FilesUploader
     ],
     entryComponents: [
     ]

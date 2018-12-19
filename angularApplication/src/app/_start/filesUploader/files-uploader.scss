@@ -1,0 +1,92 @@
+ :host{
+     //margin: 5px 5px 0 5px;
+     button{
+         position: absolute;
+         top: 0;
+         right: 0;
+     }
+     .img-container, .img-container2{
+         position: relative;
+         display: inline-block;
+     }
+     .img-container, .img-container>img{
+        
+             max-height: 280px;
+             width: 100%;
+            
+             max-width: 380px;
+             
+     } 
+     .img-container2, .img-container2>img{
+        height: 100%;
+        max-height: 200px;
+        max-width: 200px;
+        border-radius: 100px;
+     }
+ }
+
+.inputWrapper {
+    
+    height: 90%;
+    width: 90%;
+
+    overflow: auto;
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    text-align: center;   
+    align-content: center;
+    background-color: #808080; 
+    i{
+        font-size: 46px;
+        padding: 20px;
+    }
+}
+.inputAvatar {
+    height: 100%;
+    width: 100%;
+
+    overflow: auto;
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    text-align: center;   
+    align-content: center;
+}
+.fileInput {
+    vertical-align:bottom;
+    cursor: pointer;
+    height: 100%;
+    
+    position:absolute;
+    top: 0;
+    right: 0;
+    z-index: 99;
+    /*This makes the button huge. If you want a bigger button, increase the font size*/
+    font-size:50px;
+    /*Opacity settings for all browsers*/
+    opacity: 0;
+    -moz-opacity: 0;
+    filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0)
+} 
+.camaraButton{
+    height: 100%;
+}
+
+.camaraIcon{
+    // border: 10px dotted rgb(38.6%, 38.4%, 38.4%);
+    // border-radius: 10px;
+    vertical-align:bottom;
+
+}
+
+input[type='file'] {
+    color: transparent;
+  }
+
+// .textInfo{
+//     border: 10px dotted rgb(38.6%, 38.4%, 38.4%);
+//     border-radius: 10px;
+
+// }
+

@@ -11,21 +11,27 @@
     box-shadow: 0px 0.5px 1px #666;
     // margin-right: 1%;
     // margin-bottom: 1%;
-    background-color: rgb(74, 21, 51);
+    background-color: #023852; // rgb(74, 21, 51);
 }
 
 .sidenav-style{
-  background-color: rgb(74, 21, 51);
+  background-color: #023852; // rgb(74, 21, 51);
   width: 60px;
+}
+
+.sidenav-style2{
+  background-color: #ffffff; // rgb(74, 21, 51);
+  width: 350px;
 }
 
 .layoutContainer {
   position: absolute;
   top: 0;
-  bottom: 26px; //footerSize
+  bottom: 24px; //footerSize
   left: 0;
   right: 0;
   background: #d8d8d8;
+  font-family: sans-serif;
 }
 
 .subLayoutContainer {
